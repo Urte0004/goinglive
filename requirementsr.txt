@@ -1,9 +1,0 @@
-#python3.12 -m venv .venv
-#source .venv/bin/activate
-numpy
-pandas
-matplotlib
-requests
-Pyarrow
-scipy
-scikit-learn

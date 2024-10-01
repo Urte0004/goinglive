@@ -44,7 +44,7 @@ while True:
     if 1<=dt.datetime.now().isoweekday() <=5:
         today = dt.datetime.now().date()
         #changing for when starting midday
-        if (dt.datetime.now().hour * 60) + dt.datetime.now().minute < 600:
+        if (dt.datetime.now().hour * 60) + dt.datetime.now().minute < 924:
         
             if dt.datetime.now().isoweekday() == 1:
 
@@ -63,7 +63,7 @@ while True:
             month = month_int_to_string[dt.datetime.today().month]
             secs_till_open = (dt.datetime.combine(date=today ,time=dt.time(hour=10, minute=0)) - dt.datetime.now()).total_seconds()
             print("sleeping till open")
-            time.sleep(secs_till_open)
+            #time.sleep(secs_till_open)
         while dt.time(hour=10,minute=0) < dt.datetime.now().time() < dt.time(hour=16,minute=0):
             curr_price, curr_std = fetch(key, stock_ticker, today, std)
             
